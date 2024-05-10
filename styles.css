@@ -70,6 +70,17 @@ body {
   }
 }
 
+@keyframes intro-mobile {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
 .first-slide .intro {
   animation: intro 3s ease-in-out;
   overflow-y: hidden;
@@ -179,6 +190,16 @@ body {
   }
   to {
     left: -599%;
+  }
+}
+
+
+@keyframes events-movement-mobile {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1599%;
   }
 }
 
@@ -390,6 +411,17 @@ footer {
   }
 }
 
+@keyframes appear-last-flash-desc-mobile {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+
 
 .last-flash-desc {
   display: block;
@@ -403,4 +435,57 @@ footer {
   overflow-y: hidden;
 
   animation: appear-last-flash-desc 3s calc(10s + 77s) forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .first-slide {
+    width: 90%;
+  }
+
+  .first-slide .intro {
+    animation: intro-mobile 3s ease-in-out;
+  }
+
+  .first-slide .desc,
+  .second-slide .desc {
+    width: 90%;
+  }
+
+  .last-flash-desc {
+    animation: appear-last-flash-desc-mobile 3s calc(10s + 77s) forwards;
+  }
+
+  .third-slide .event {
+    font-size: 20px;
+    min-width: 100%;
+  }
+  
+  .third-slide .event {
+    animation: events-movement-mobile 38s 33s ease-in forwards;
+  }
+
+  .event-desc {
+    font-size: 15px;
+  }
+
+  .fourth-slide {
+    flex-direction: column;
+  }
+
+  .fourth-slide img {
+    position: absolute;
+    width: 70%;
+  }
+
+  .fifth-slide div {
+    font-size: 30px;
+  }
+
+  .fifth-slide .last-flash {
+    font-size: 40px;
+  }
+
+  .last-flash-desc {
+    font-size: 0.8rem !important;
+  }
 }
