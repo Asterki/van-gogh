@@ -7,10 +7,6 @@
     <title>34 Fernando Rivera</title>
   </head>
   <body>
-    <header id="header">
-      Click anywhere to start the background music.
-    </header>
-
     <div class="first-slide">
       <h1 class="intro">Vincent Van Gogh</h1>
       <img class="portrait" src="https://asterki.github.io/van-gogh/van.jpg" alt="" />
@@ -198,7 +194,7 @@
     </div>
 
     <div class="fifth-slide">
-      <div style="--ad: 2.5s">
+      <div style="--ad: 2.6s">
         <img
           src="https://www.vincentvangogh.org/assets/img/paintings/almond-blossom.jpg"
           alt=""
@@ -334,8 +330,6 @@
       class="audio"
       src="https://asterki.github.io/van-gogh/song.mp3"
       autoplay="autoplay"
-      controls
-      muted
     ></audio>
 
     <footer>
@@ -344,11 +338,17 @@
   </body>
 
   <script>
-    document.addEventListener("click", () => {
-      const audio = document.getElementById("audio");
-      audio.muted = false;
-
-      document.getElementById("header").style.display = "none";
-    });
+    // Make the audio fade in when the page loads
+    const audio = document.getElementById("audio");
+    audio.volume = 0;
+    audio.play();
+    let volume = 0;
+    const fadeIn = setInterval(() => {
+      volume += 0.01;
+      audio.volume = volume;
+      if (volume >= 0.4) {
+        clearInterval(fadeIn);
+      }
+    }, 200);
   </script>
 </html>
