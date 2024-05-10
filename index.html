@@ -311,23 +311,24 @@
           src="https://www.vincentvangogh.org/assets/img/paintings/self-portrait.jpg"
           alt=""
         />
-        <p>Passion
+        <p>
+          Passion
 
           <span class="last-flash-desc">
             Vincent van Gogh's passion was an unstoppable force, an inferno
             burning brightly within him, igniting his soul and fueling his
-            artistic vision. From an early age, Van Gogh was consumed by a fervent
-            desire to express himself through art, driven by an insatiable hunger
-            to capture the world's beauty and turmoil on canvas. <br /><br />
-            His passion manifested in every aspect of his life – in his relentless
-            pursuit of artistic mastery, his unwavering commitment to his craft,
-            and his willingness to sacrifice comfort and stability in the name of
-            his art. Van Gogh lived and breathed painting, dedicating himself
-            wholeheartedly to the pursuit of truth and beauty through his work.
+            artistic vision. From an early age, Van Gogh was consumed by a
+            fervent desire to express himself through art, driven by an
+            insatiable hunger to capture the world's beauty and turmoil on
+            canvas. <br /><br />
+            His passion manifested in every aspect of his life – in his
+            relentless pursuit of artistic mastery, his unwavering commitment to
+            his craft, and his willingness to sacrifice comfort and stability in
+            the name of his art. Van Gogh lived and breathed painting,
+            dedicating himself wholeheartedly to the pursuit of truth and beauty
+            through his work.
           </span>
         </p>
-
-        
       </div>
     </div>
 
@@ -348,6 +349,8 @@
     const audio = document.getElementById("audio");
     audio.volume = 0.3;
 
-    audio.play();
+    window.onload = function () {
+      document.getElementById("my_audio").play();
+    };
   </script>
 </html>
