@@ -5,6 +5,16 @@
   user-select: none !important;
 }
 
+header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+
+  opacity: 0.4;
+}
+
 body {
   font-family: "Courier New", Courier, monospace;
   color: white;

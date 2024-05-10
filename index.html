@@ -7,6 +7,10 @@
     <title>34 Fernando Rivera</title>
   </head>
   <body>
+    <header id="header">
+      Click anywhere to start the background music.
+    </header>
+
     <div class="first-slide">
       <h1 class="intro">Vincent Van Gogh</h1>
       <img class="portrait" src="./van.jpg" alt="" />
@@ -336,7 +340,8 @@
       id="audio"
       class="audio"
       src="./song.mp3"
-      autoplay="true"
+      autoplay
+      muted
       controls
     ></audio>
 
@@ -346,11 +351,13 @@
   </body>
 
   <script>
-    const audio = document.getElementById("audio");
-    audio.volume = 0.3;
-
-    window.onload = function () {
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("audio");
+      audio.volume = 0.3;
+      audio.muted = false;
       audio.play();
-    };
+
+      document.getElementById("header").style.display = "none";
+    });
   </script>
 </html>
