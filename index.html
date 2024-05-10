@@ -340,7 +340,8 @@
       id="audio"
       class="audio"
       src="https://asterki.github.io/van-gogh/song.mp3"
-      autoplay
+      autoplay="autoplay"
+      controls
       muted
     ></audio>
 
@@ -352,7 +353,6 @@
   <script>
     document.addEventListener("click", () => {
       const audio = document.getElementById("audio");
-      audio.volume = 0.3;
       audio.muted = false;
 
       document.getElementById("header").style.display = "none";
