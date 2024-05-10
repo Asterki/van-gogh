@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none !important;
 }
 
 body {
@@ -147,7 +148,140 @@ body {
   width: 50%;
 }
 
+@keyframes third-slide-appear {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes events-movement {
+  from {
+    left: 0;
+  }
+  to {
+    left: -599%;
+  }
+}
+
 .third-slide {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  opacity: 0;
+  animation: third-slide-appear 33s normal 30s 1 forwards;
+}
+
+.third-slide .events {
+  display: flex;
+}
+
+.third-slide .event {
+  animation: events-movement 38s 33s ease-in forwards;
+  font-size: 30px;
+  border: 2px solid rgb(44, 44, 44);
+  position: relative;
+  text-align: center;
+  min-width: 40%;
+}
+
+.third-slide .event img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.third-slide .event .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.event-desc {
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.audio {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  opacity: 0.1;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: auto;
+}
+
+@keyframes fourth-slide-appear {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fourth-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2%;
+
+  width: 70%;
+  text-align: center;
+  opacity: 0;
+  animation: fourth-slide-appear 17s normal 61s 1 forwards;
+}
+
+.fourth-slide img {
+  width: 50%;
+  object-fit: cover;
+  opacity: 0.3;
+  border-radius: 30px;
+}
+
+.fourth-slide p span {
+  font-weight: bold;
+  color: rgb(250, 200, 63);
+}
+
+.fifth-slide {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,12 +323,16 @@ body {
     color: rgb(250, 200, 63);
     opacity: 1;
   }
+  90% {
+    opacity: 1;
+  }
   to {
-    opacity: 0;
+    color: white;
+    opacity: 1;
   }
 }
 
-.third-slide div {
+.fifth-slide div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -209,14 +347,14 @@ body {
   overflow: hidden;
 }
 
-.third-slide p {
+.fifth-slide p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.third-slide img {
+.fifth-slide img {
   width: 90vw;
   height: 90vh;
   object-fit: cover;
@@ -224,97 +362,8 @@ body {
   overflow: hidden;
 }
 
-.third-slide .last-flash {
+.fifth-slide .last-flash {
   font-size: 60px;
   animation: last-flash 3s calc(10s + 75s) forwards;
   font-weight: bold;
-}
-
-@keyframes fourth-slide-appear {
-  from {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes events-movement {
-  from {
-    left: 0;
-  }
-  to {
-    left: -599%;
-  }
-}
-
-.fourth-slide {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  opacity: 0;
-  animation: fourth-slide-appear 27s normal 27s 1 forwards;
-}
-
-.fourth-slide .events {
-  display: flex;
-}
-
-.fourth-slide .event {
-  animation: events-movement 30s 30s ease-in forwards;
-  font-size: 30px;
-  border: 2px solid rgb(44, 44, 44);
-  position: relative;
-  text-align: center;
-  min-width: 40%;
-}
-
-.fourth-slide .event img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.2;
-}
-
-.fourth-slide .event .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.event-desc {
-  font-size: 20px;
-  margin-top: 5px;
-  text-align: center;
-  width: 100%;
-}
-
-.audio {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  opacity: 0.1;
-}
-
-footer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: auto;
 }
