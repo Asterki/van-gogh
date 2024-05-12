@@ -1,20 +1,10 @@
 .first-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  width: 100vw;
-  text-align: center;
-  opacity: 0;
-  animation: fade-in-out 17s ease-in-out forwards;
+  animation: fade-in-out 19s ease-in-out forwards;
 }
 
 .typewriter {
-  position: relative;
-  width: 300px; /* adjust the width according to your needs */
+  width: 300px; 
   font-size: 45px;
-  font-family: monospace;
   overflow: hidden;
   height: 55px;
   animation: typing 10s forwards;
@@ -80,7 +70,6 @@
 
 @media screen and (max-width: 722px) {
   .first-slide .typewriter {
-    animation: intro-mobile 3s ease-in-out;
     font-size: 20px;
     height: 25px;
   }
@@ -96,7 +85,6 @@
 
 @media screen and (max-width: 1024px) {
   .first-slide .typewriter {
-    animation: intro-mobile 3s ease-in-out;
     font-size: 20px;
     height: 25px;
   }

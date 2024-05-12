@@ -1,40 +1,10 @@
 
-
-@keyframes second-card {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 .second-slide {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-
-  animation: second-card 13s ease-in-out 18s forwards;
+  animation: fade-in-out 16s ease-in-out 19s forwards;
 }
 
 .second-slide .desc {
-  animation: second-slide-desc 3s ease-in-out 18s forwards;
+  animation: second-slide-desc 3s ease-in-out 19s forwards;
 }
 
 @keyframes second-slide-desc {

@@ -12,7 +12,7 @@
     <title>34 Fernando Rivera</title>
   </head>
   <body>
-    <div class="first-slide">
+    <div class="first-slide slide">
       <h1 class="typewriter">Vincent Van Gogh</h1>
       <img class="portrait" src="https://asterki.github.io/van-gogh/van.jpg" alt="" />
       <p class="desc">
@@ -33,7 +33,7 @@
       </p>
     </div>
 
-    <div class="second-slide">
+    <div class="second-slide slide">
       <p class="desc">
         As you navigate through the corridors of his existence, each click
         unveils a new layer of insight into the man behind the masterpieces –
@@ -53,9 +53,9 @@
       </p>
     </div>
 
-    <div class="third-slide">
+    <div class="third-slide slide">
       <div class="events">
-        <div class="event" style="--ad: 3s">
+        <div class="event" style="--ad: 4.2s">
           <img
             src="https://vangoghroute.com/wp-content/uploads/2023/02/znd_zundert_01.-vierkant.png"
             alt=""
@@ -68,7 +68,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 6s">
+        <div class="event" style="--ad: 8.4s">
           <img
             src="https://blackcablondon.net/wp-content/uploads/2013/09/goupil-and-cie-paris.jpg?w=620"
             alt=""
@@ -81,7 +81,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 9s">
+        <div class="event" style="--ad: 12.6s">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/42/Hippolyte_Boulenger005.jpg"
             alt=""
@@ -93,7 +93,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 12s">
+        <div class="event" style="--ad: 16.8s">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/42/Van_Gogh_-_Die_Kirche_von_Nuenen_mit_Kirchg%C3%A4ngern.jpeg"
             alt=""
@@ -106,7 +106,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 15s">
+        <div class="event" style="--ad: 21s">
           <img
             src="https://hips.hearstapps.com/hmg-prod/images/paris-the-nave-of-the-notre-dame-church-around-1870-1880-news-photo-1583934740.jpg?crop=1xw:1xh;center,top&resize=980:*"
             alt=""
@@ -120,7 +120,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 18s">
+        <div class="event" style="--ad: 25.2s">
           <img
             src="https://media.istockphoto.com/id/545638086/photo/arles-in-south-west-france-provence.jpg?s=612x612&w=0&k=20&c=InbjG0ce6ps4e7TSKJN3ABHBLOTixq9C9pP8AiXABcY="
             alt=""
@@ -135,7 +135,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 21s">
+        <div class="event" style="--ad: 29.4s">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/43/St-remy-de-provence_vue.JPG"
             alt=""
@@ -149,7 +149,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 24s">
+        <div class="event" style="--ad: 33.6s">
           <img src="https://asterki.github.io/van-gogh/van.jpg" alt="" />
           <div class="content">
             <p>1890, July 27</p>
@@ -159,7 +159,7 @@
             </p>
           </div>
         </div>
-        <div class="event" style="--ad: 27s">
+        <div class="event" style="--ad: 37.8s">
           <img
             src="https://lp-cms-production.imgix.net/2021-03/Starry_Night_Van_Gogh_MoMA_New_York.jpg?auto=format&q=75"
             alt=""
@@ -176,7 +176,7 @@
       </div>
     </div>
 
-    <div class="fourth-slide">
+    <div class="fourth-slide slide">
       <img
         src="https://live.staticflickr.com/65535/53064735916_b60be21694_c.jpg"
         alt=""
@@ -198,7 +198,7 @@
       </p>
     </div>
 
-    <div class="fifth-slide">
+    <div class="fifth-slide slide">
       <div style="--ad: 2.6s">
         <img
           src="https://www.vincentvangogh.org/assets/img/paintings/almond-blossom.jpg"
@@ -335,6 +335,7 @@
       class="audio"
       src="https://asterki.github.io/van-gogh/song.mp3"
       autoplay="autoplay"
+      controls
     ></audio>
 
     <footer>
@@ -346,7 +347,11 @@
     // Make the audio fade in when the page loads
     const audio = document.getElementById("audio");
     audio.volume = 0;
-    audio.play();
+    
+    setTimeout(() => {
+      audio.play();
+    }, 100)
+
     let volume = 0;
     const fadeIn = setInterval(() => {
       volume += 0.01;

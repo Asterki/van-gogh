@@ -45,8 +45,23 @@ body {
 .desc {
   width: 60%;
   margin-top: 20px;
-  font-size: 20px;
 
+  text-align: center;
+  opacity: 0;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   opacity: 0;
 }
