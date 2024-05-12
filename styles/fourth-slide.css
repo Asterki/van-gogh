@@ -74,3 +74,9 @@
     width: 100vw;
   }
 }
+
+@media screen and (max-width: 722px) {
+  .fourth-slide div {
+    font-size: 20px;
+  }
+}
