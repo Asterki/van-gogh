@@ -82,6 +82,8 @@
   object-fit: cover;
   opacity: 0.2;
   overflow: hidden;
+
+  border-radius: 20px;
 }
 
 .fifth-slide .last-flash {

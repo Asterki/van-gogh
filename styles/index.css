@@ -31,10 +31,10 @@ body {
   0% {
     opacity: 0;
   }
-  30% {
+  10% {
     opacity: 1;
   }
-  70% {
+  90% {
     opacity: 1;
   }
   to {

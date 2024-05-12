@@ -1,3 +1,76 @@
+/* 68 */
+
 .fourth-slide {
-  animation: fade-in-out 8s ease-in-out 68s forwards; 
+  animation: fade-in-out 12s ease-in-out 68s forwards;
+}
+
+@keyframes flashing-words {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fourth-slide div {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  animation-name: flashing-words;
+  animation-duration: var(--adr);
+  text-align: center;
+  animation-delay: calc(var(--ad) + 68s);
+
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.fourth-slide div:nth-child(1),
+.fourth-slide div:nth-child(6),
+.fourth-slide div:nth-child(11) {
+  top: 10%;
+}
+
+.fourth-slide div:nth-child(2),
+.fourth-slide div:nth-child(7),
+.fourth-slide div:nth-child(12) {
+  top: 30%;
+}
+
+.fourth-slide div:nth-child(3),
+.fourth-slide div:nth-child(8),
+.fourth-slide div:nth-child(13),
+.fourth-slide div:nth-child(16) {
+  top: 50%;
+}
+
+.fourth-slide div:nth-child(4),
+.fourth-slide div:nth-child(9),
+.fourth-slide div:nth-child(14) {
+  top: 70%;
+}
+
+.fourth-slide div:nth-child(5),
+.fourth-slide div:nth-child(10),
+.fourth-slide div:nth-child(15) {
+  top: 90%;
+}
+
+@keyframes brush {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100vw;
+  }
 }
