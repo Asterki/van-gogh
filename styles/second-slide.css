@@ -34,5 +34,16 @@
 }
 
 .second-slide .desc {
-  width: 50%;
+  animation: second-slide-desc 3s ease-in-out 18s forwards;
+}
+
+@keyframes second-slide-desc {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 0.6;
+    transform: translateY(0%);
+  }
 }
