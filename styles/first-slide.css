@@ -13,10 +13,10 @@
 .typewriter {
   position: relative;
   width: 300px; /* adjust the width according to your needs */
-  font-size: 18px;
+  font-size: 45px;
   font-family: monospace;
   overflow: hidden;
-  height: 20px;
+  height: 55px;
   animation: typing 10s forwards;
   width: 50%;
 
@@ -79,7 +79,7 @@
 }
 
 @media screen and (max-width: 722px) {
-  .first-slide .intro {
+  .first-slide .typewriter {
     animation: intro-mobile 3s ease-in-out;
     font-size: 20px;
     height: 25px;
@@ -95,7 +95,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .first-slide .intro {
+  .first-slide .typewriter {
     animation: intro-mobile 3s ease-in-out;
     font-size: 20px;
     height: 25px;

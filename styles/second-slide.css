@@ -30,7 +30,7 @@
   text-align: center;
   opacity: 0;
 
-  animation: second-card 10s ease-in-out 18s forwards;
+  animation: second-card 13s ease-in-out 18s forwards;
 }
 
 .second-slide .desc {
