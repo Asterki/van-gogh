@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none !important;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+
+  opacity: 0.4;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.audio {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  opacity: 0.1;
+
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: auto;
+}

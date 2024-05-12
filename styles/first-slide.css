@@ -1,85 +1,112 @@
-
-@keyframes first-card {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 .first-slide {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  width: 100%;
+  width: 100vw;
   text-align: center;
   opacity: 0;
-  animation: first-card 17s ease-in-out forwards;
+  animation: fade-in-out 17s ease-in-out forwards;
 }
 
-@keyframes intro {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 20%;
-    opacity: 1;
-  }
+.typewriter {
+  position: relative;
+  width: 300px; /* adjust the width according to your needs */
+  font-size: 18px;
+  font-family: monospace;
+  overflow: hidden;
+  height: 20px;
+  animation: typing 10s forwards;
+  width: 50%;
+
+  white-space: nowrap;
+  border-right: 2px solid white;
 }
 
-@keyframes intro-mobile {
+@keyframes typing {
   from {
     width: 0;
-    opacity: 0;
   }
   to {
     width: 50%;
-    opacity: 1;
+    border-right: 2px solid #ffffff00;
   }
 }
 
-.first-slide .intro {
-  animation: intro 3s ease-in-out;
-  overflow-y: hidden;
-  word-break: break-all;
-  font-size: 40px;
-  height: 45px;
+.first-slide .portrait {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -20;
+
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.466);
+
+  width: 50%;
+  max-height: 100vh;
+  size: cover;
+
+  opacity: 0;
+  animation: protrait 4.5s ease-in-out 1.5s forwards;
 }
 
 @keyframes protrait {
   from {
     opacity: 0;
+    transform: translate(-50%, -65%);
   }
   to {
     opacity: 0.16;
+    transform: translate(-50%, -50%);
   }
 }
 
-.first-slide .portrait {
+.first-slide .desc {
+  width: 60%;
+  margin-top: 20px;
+
+  text-align: center;
   opacity: 0;
+  animation: first-slide-desc 3s ease-in-out 3s forwards;
+}
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, 0.466);
+@keyframes first-slide-desc {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 0.6;
+    transform: translateY(0%);
+  }
+}
 
-  animation: protrait 3s ease-in-out 1.5s forwards;
+@media screen and (max-width: 722px) {
+  .first-slide .intro {
+    animation: intro-mobile 3s ease-in-out;
+    font-size: 20px;
+    height: 25px;
+  }
+
+  .desc {
+    width: 90% !important;
+  }
+
+  .first-slide .portrait {
+    width: 95% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .first-slide .intro {
+    animation: intro-mobile 3s ease-in-out;
+    font-size: 20px;
+    height: 25px;
+  }
+
+  .desc {
+    width: 70% !important;
+  }
 }
