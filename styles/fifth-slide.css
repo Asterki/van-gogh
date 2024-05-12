@@ -86,34 +86,32 @@
   border-radius: 20px;
 }
 
+@keyframes last-flash-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .fifth-slide .last-flash {
   font-size: 60px;
-  animation: last-flash 3s calc(10s + 75s) forwards;
+  animation: last-flash 3s calc(10s + 75s) forwards,
+    last-flash-hide 3s calc(10s + 88s) forwards;
   font-weight: bold;
 }
 
 @keyframes appear-last-flash-desc {
   from {
     opacity: 0;
-    height: 0px;
+    transform: translateY(50%);
   }
   to {
-    opacity: 1;
-    height: 40vh;
+    opacity: 0.8;
+    transform: translateY(0%);
   }
 }
-
-@keyframes appear-last-flash-desc-mobile {
-  from {
-    opacity: 0;
-    height: 0px;
-  }
-  to {
-    opacity: 1;
-    height: 80vh;
-  }
-}
-
 
 .last-flash-desc {
   display: block;
@@ -121,9 +119,8 @@
   font-size: 1rem !important;
   margin-top: 5px;
   text-align: center;
-  opacity: 1 !important;
+  opacity: 0;
 
-  height: 0px;
   overflow-y: hidden;
 
   animation: appear-last-flash-desc 3s calc(10s + 77s) forwards;
