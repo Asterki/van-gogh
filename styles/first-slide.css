@@ -1,0 +1,85 @@
+
+@keyframes first-card {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.first-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: first-card 17s ease-in-out forwards;
+}
+
+@keyframes intro {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 20%;
+    opacity: 1;
+  }
+}
+
+@keyframes intro-mobile {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+.first-slide .intro {
+  animation: intro 3s ease-in-out;
+  overflow-y: hidden;
+  word-break: break-all;
+  font-size: 40px;
+  height: 45px;
+}
+
+@keyframes protrait {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.16;
+  }
+}
+
+.first-slide .portrait {
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.466);
+
+  animation: protrait 3s ease-in-out 1.5s forwards;
+}

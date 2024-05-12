@@ -1,0 +1,56 @@
+@keyframes desc {
+  from {
+    opacity: 0;
+    y: 300px;
+  }
+  to {
+    opacity: 0.6;
+    y: 0;
+  }
+}
+
+.first-slide .desc,
+.second-slide .desc {
+  opacity: 0;
+  width: 20%;
+  margin-top: 20px;
+  text-align: center;
+  animation: desc 3s ease-in-out 3s forwards;
+}
+
+@keyframes second-card {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.second-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+
+  animation: second-card 10s ease-in-out 18s forwards;
+}
+
+.second-slide .desc {
+  width: 50%;
+}
