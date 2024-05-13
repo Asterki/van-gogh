@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/landing.css" />
   </head>
   <body>
-    <a href="animation.html">Start Animation</a>
+    <a href="#" id="link">Loading Assets...</a>
 
     <audio
       id="audio"
@@ -15,5 +15,14 @@
       preload="auto"
       src="https://asterki.github.io/van-gogh/song.mp3"
     ></audio>
+
+    <iframe class="preloader" src="animation.html"></iframe>
   </body>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("link").innerHTML = "Click to start";
+      document.getElementById("link").href = "animation.html";
+    });
+  </script>
 </html>
